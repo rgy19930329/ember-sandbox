@@ -1,0 +1,10 @@
+<ul class="cell -4of12" local-class="user-list">{{!-- 1.2 --}}
+  {{#if selectedUser}}
+    <button type="button" class="btn btn-primary btn-block" onclick={{action "clearUser"}}>
+      重置
+    </button>
+  {{/if}}
+  {{#each users as |user|}}
+    <li local-class="user-item" onclick={{action "selectUser" user}}>{{user.login}}</li>
+  {{/each}}
+</ul>
