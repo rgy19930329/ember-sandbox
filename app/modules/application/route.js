@@ -8,14 +8,14 @@ export default Route.extend({
     const ajax = this.get('ajax');
     ajax.host = 'https://api.github.com';
 
-    this.remindAuth = null;
-    const token = window.localStorage.getItem('github_api_oauth_token');
-
-    if (token) {
-      ajax.headers['Authorization'] = `token ${token}`;
-    } else {
-      this.remindAuth = '别忘了先做 OAuth 鉴权哦，否则每小时只能请求 60 次呢～';
-    }
+    // this.remindAuth = null;
+    // const token = window.localStorage.getItem('github_api_oauth_token');
+    //
+    // if (token) {
+    //   ajax.headers['Authorization'] = `token ${token}`;
+    // } else {
+    //   this.remindAuth = '别忘了先做 OAuth 鉴权哦，否则每小时只能请求 60 次呢～';
+    // }
   },
 
   setupController(controller) {
